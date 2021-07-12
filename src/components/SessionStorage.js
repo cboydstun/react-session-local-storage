@@ -1,26 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-//initialize session storage
-function getSessionStorageOrDefault(key, defaultValue) {
-  const stored = sessionStorage.getItem(key);
-  if (!stored) {
-    return defaultValue;
-  }else{
-    return JSON.parse(stored);
-  }
-}
+//import custom hook
+import { useSessionStorage } from '../hooks/useSessionStorage';
 
 export default function SessionStorage() {
   //initialize slice of state  
-  const [termsAccepted, setTermsAccepted] = useState(
-    //set initial state  
-    getSessionStorageOrDefault('terms', false)
-  );
-
-  //set session storage
-  useEffect(() => {
-    sessionStorage.setItem('terms', JSON.stringify(termsAccepted));
-  }, [termsAccepted]);
+  const [termsAccepted, setTermsAccepted] = useSessionStorage('terms', false)
 
   //conditionally render the component
   if (!termsAccepted) {
