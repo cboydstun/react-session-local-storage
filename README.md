@@ -1,4 +1,4 @@
-## MERN Note Taker Application
+## React Local Storage and Session Storage Components
 
 ### Installation
 
