@@ -25,3 +25,16 @@ body {
 .welcome {
   font-size: 2rem;
 }
+
+.terms button {
+  padding: 1rem;
+  border-radius: 2rem;
+  background-color: dodgerblue;
+  color: white;
+  font-size: 2rem;
+}
+
+.thanks {
+  font-size: 2rem;
+  color: rebeccapurple;
+}
