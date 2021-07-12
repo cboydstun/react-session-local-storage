@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 export default function LocalStorage() {
 
-  let [welcomeMessage, setWelcomeMessage] = useState("Welcome -- is it your first time? (It is, we know 😉)")
+  let [welcomeMessage, setWelcomeMessage] = useState("Welcome! Been here before?")
 
   useEffect(() => {
     // checking if localStorage has a "hasVisited" key
@@ -17,8 +17,8 @@ export default function LocalStorage() {
   },[])
 
   return (
-    <div>
-        {welcomeMessage}
+    <div className="welcome">
+        <h1>{welcomeMessage}</h1>
     </div>
   );
 }

@@ -19,17 +19,13 @@ export default function SessionStorage() {
 
   if (!termsAccepted) {
     return (
-      <>
+      <div>
         <h1>Terms of Service</h1>
         <p>These are the terms for using the application.</p>
-        <button
-          onClick={() => {
-            setTermsAccepted(true);
-          }}
-        >
+        <button onClick={() => {setTermsAccepted(true);}} >
           I accept
         </button>
-      </>
+      </div>
     );
   }
 
